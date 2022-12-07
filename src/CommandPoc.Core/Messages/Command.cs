@@ -6,7 +6,7 @@ using MediatR;
 
 namespace CommandPoc.Core.Messages
 {
-    public abstract class Command : IRequest<bool>
+    public abstract class Command<T> : IRequest<T>
     {
         public DateTime Timestamp { get; private set; }
 
@@ -15,7 +15,7 @@ namespace CommandPoc.Core.Messages
             Timestamp = DateTime.Now;
         }
 
-        public virtual bool EhValido()
+        public virtual bool IsValid()
         {
             throw new NotImplementedException();
         }
