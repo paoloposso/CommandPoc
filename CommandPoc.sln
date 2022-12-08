@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPoc.Validation", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPoc.Core", "src\CommandPoc.Core\CommandPoc.Core.csproj", "{5B621EE2-BAEC-469C-9497-059B81B78BBC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58930EEB-DEDC-4713-BDFC-DBA8D4C85E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPoc.Validation.Data", "src\CommandPoc.Validation.Data\CommandPoc.Validation.Data.csproj", "{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,12 @@ Global
 		{5B621EE2-BAEC-469C-9497-059B81B78BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B621EE2-BAEC-469C-9497-059B81B78BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B621EE2-BAEC-469C-9497-059B81B78BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF} = {58930EEB-DEDC-4713-BDFC-DBA8D4C85E0B}
 	EndGlobalSection
 EndGlobal
