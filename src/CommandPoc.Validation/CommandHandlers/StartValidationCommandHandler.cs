@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CommandPoc.Validation.Commands;
-using CommandPoc.Validation.Domain.Services;
+using CommandPoc.Validation.Domain;
+using CommandPoc.Validation.Domain.Model;
 using MediatR;
 
 namespace CommandPoc.Validation.CommandHandlers
@@ -12,11 +9,11 @@ namespace CommandPoc.Validation.CommandHandlers
         IRequestHandler<StartGitHubTerraformValidationCommand, bool>,
         IRequestHandler<StartTerraformValidationCommand, StartTerraformValidationCommandResult>
     {
-        TerraformValidationService _service;
+        IValidationRepository _repository;
 
-        public StartValidationCommandHandler(TerraformValidationService service)
+        public StartValidationCommandHandler(IValidationRepository repository)
         {
-            _service = service;
+            _repository = repository;
         }
 
         public Task<bool> Handle(StartGitHubTerraformValidationCommand request, CancellationToken cancellationToken)
@@ -24,11 +21,18 @@ namespace CommandPoc.Validation.CommandHandlers
             throw new NotImplementedException();
         }
 
-        public Task<StartTerraformValidationCommandResult> Handle(StartTerraformValidationCommand request, CancellationToken cancellationToken)
+        public async Task<StartTerraformValidationCommandResult> Handle(StartTerraformValidationCommand request, CancellationToken cancellationToken)
         {
-            var resultStatus = _service.Validate(new Domain.Model.TerraformValidation(request.ValidationId));
 
-            return Task.FromResult(new StartTerraformValidationCommandResult(resultStatus));
+            var terraformValidation = new TerraformValidation(Guid.NewGuid(), "started", DateTime.UtcNow);
+
+            //execute validation here
+
+            terraformValidation.SetStatus("finished");
+
+            await _repository.UpdateValidationStatus(terraformValidation.ValidationId, terraformValidation.Status);
+
+            return new StartTerraformValidationCommandResult(terraformValidation.Status);
         }
     }
 }

@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using CommandPoc.Validation.Domain;
 using CommandPoc.Validation.Domain.Model;
 
 namespace CommandPoc.Validation.Data.Repository
@@ -10,10 +7,11 @@ namespace CommandPoc.Validation.Data.Repository
     {
         public Task<TerraformValidation> GetTerraformValidation(Guid validationId)
         {
-            throw new NotImplementedException();
+            //this is mock
+            return Task.FromResult(new TerraformValidation(validationId, "finished", DateTime.Now.AddDays(-7)));
         }
 
-        public Task UpdateValidationStatus(Guid validationId, string status)
+        public Task UpdateValidationStatus(Guid validationId, string newStatus)
         {
             return Task.CompletedTask;
         }

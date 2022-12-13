@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58930EEB-DED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPoc.Validation.Data", "src\CommandPoc.Validation.Data\CommandPoc.Validation.Data.csproj", "{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPoc.Validation.Api", "src\CommandPoc.Validation.Api\CommandPoc.Validation.Api.csproj", "{D0B9746D-C248-49D7-B3AF-5A818BA3C75D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +34,13 @@ Global
 		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B9746D-C248-49D7-B3AF-5A818BA3C75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B9746D-C248-49D7-B3AF-5A818BA3C75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B9746D-C248-49D7-B3AF-5A818BA3C75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B9746D-C248-49D7-B3AF-5A818BA3C75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{30732A6B-0595-496A-8C3A-7B5A4D4D84DF} = {58930EEB-DEDC-4713-BDFC-DBA8D4C85E0B}
+		{D0B9746D-C248-49D7-B3AF-5A818BA3C75D} = {58930EEB-DEDC-4713-BDFC-DBA8D4C85E0B}
 	EndGlobalSection
 EndGlobal
